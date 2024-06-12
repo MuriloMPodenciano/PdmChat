@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
             setSupportActionBar(this)
         }
 
-
+        amb.sendButton.setOnClickListener {
+            sendMessage()
+        }
     }
 }
