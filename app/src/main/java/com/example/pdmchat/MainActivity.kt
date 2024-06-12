@@ -18,5 +18,7 @@ class MainActivity : AppCompatActivity() {
             subtitle = this@MainActivity.javaClass.simpleName
             setSupportActionBar(this)
         }
+
+
     }
 }

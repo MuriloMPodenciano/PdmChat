@@ -10,10 +10,38 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/design_default_color_primary"
-        app:titleTextColor="@color/design_default_color_on_primary"
-        app:subtitleTextColor="@color/design_default_color_on_primary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/sendMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/messageInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Digite sua mensagem"
+            android:maxLines="2"
+            android:inputType="textMultiLine|textCapSentences"
+            android:imeOptions="actionSend" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:onClick="sendMessage"
+            android:enabled="false" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
