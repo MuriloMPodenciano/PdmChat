@@ -46,5 +46,7 @@ class MainActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 amb.messageInput.setText("")
             }
+            .addOnFailureListener {
+            }
     }
 }
