@@ -32,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun setupRecyclerView() {
+
+    }
+
     private fun sendMessage() {
         val messageText = amb.messageInput.text.toString().trim()
         if (messageText.isEmpty()) return
