@@ -2,6 +2,7 @@ package com.example.pdmchat
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pdmchat.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
+        val layoutManager = LinearLayoutManager(this)
+        amb.messageRecyclerView.layoutManager = layoutManager
 
     }
 
