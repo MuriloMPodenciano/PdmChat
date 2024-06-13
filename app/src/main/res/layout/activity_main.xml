@@ -16,6 +16,17 @@
         app:title="@string/app_name"
         app:titleTextColor="@color/white" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messageRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/mainTb"
+        app:layout_constraintBottom_toTopOf="@id/sendMessageLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/message_received" />
+
     <LinearLayout
         android:id="@+id/sendMessageLayout"
         android:layout_width="match_parent"
