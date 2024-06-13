@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
+    private lateinit var messageAdapter: MessageAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,9 +35,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        val layoutManager = LinearLayoutManager(this)
-        amb.messageRecyclerView.layoutManager = layoutManager
-
+        messageAdapter = MessageAdapter()
+        amb.messageRecyclerView.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = messageAdapter
+        }
     }
 
     private fun sendMessage() {
